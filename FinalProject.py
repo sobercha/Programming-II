@@ -61,7 +61,7 @@ lr.fit(X_train, y_train)
 y_pred = lr.predict(X_test)
 
 # New data for features: income, education, parent, married, female, age
-person = [income, educ2, par, marital, gender, age]
+person = ['income', 'educ2', 'par', 'marital', 'gender', 'age']
 
 # Predict class, given input features
 predicted_class = lr.predict([person])

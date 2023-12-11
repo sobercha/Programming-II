@@ -40,22 +40,37 @@ if educ2 == "1 - Less than high school (Grades 1-8 or no formal schooling)":
     educ2 =1
 elif educ2 == "2 - High school incomplete (Grades 9-11 or Grade 12 with NO diploma)":
     educ2 =2
-elif educ2 == "High school graduate (Grade 12 with diploma or GED certificate)":
+elif educ2 == "3 - High school graduate (Grade 12 with diploma or GED certificate)":
     educ2 =3
-elif educ2 == "Some college, no degree (includes some community college)":
+elif educ2 == "4 - Some college, no degree (includes some community college)":
     educ2 =4
-elif educ2 == "Two-year associate degree from a college or university":
+elif educ2 == "5 - Two-year associate degree from a college or university":
     educ2 =5
-elif educ2 == "Four-year college or university degree/Bachelor’s degree (e.g., BS, BA, AB)":
+elif educ2 == "6 - Four-year college or university degree/Bachelor’s degree (e.g., BS, BA, AB)":
     educ2 =6
-elif educ2 == "Some postgraduate or professional schooling, no postgraduate degree (e.g. some graduate school)":
+elif educ2 == "7 - Some postgraduate or professional schooling, no postgraduate degree (e.g. some graduate school)":
     educ2 =7  
 else:
     educ2=8 
 
-par = st.radio('#3 Are you a parent?:', ['1 - Yes','2 - No'])
+par = st.selectbox(label="#3 Are you a parent?:", options=("Yes","No"))
+if par == "Yes":
+    par = 1
+else:
+    par = 0
+    
 marital = st.radio('#4 Are you married?:', ['1 - Yes','2 - No'])
-gender = st.radio('#5 What is your gender?:', ['1 - Male','2 - Female'])
+if marital == "1 - Yes":
+    marital = 1
+else:
+    marital = 0
+
+female = st.radio('#5 What is your gender?:', ['1 - Male','2 - Female'])
+if gender == "1 - Male":
+    gender = 0
+else:
+    gender = 1
+    
 age = st.number_input('#6 What is your age?')
 
 s = pd.read_csv('social_media_usage.csv')
@@ -84,20 +99,21 @@ X_train, X_test, y_train, y_test = train_test_split(X,
 lr = LogisticRegression(class_weight='balanced')
 lr.fit(X_train, y_train)
 
-# Drop missing data
-ss = ss.dropna()
+confusion_matrix(y_test,y_pred)
 
-# Make predictions
-y_pred = lr.predict(X_test)
+newdata = pd.DataFrame({
+    "income": [8, 8],
+    "education": [7, 7],
+    "parent": [0, 0],
+    "married": [1, 1],
+    "female": [1, 1],
+    "age": [42, 82]
+})
 
-person = ['income', 'educ2', 'par', 'marital', 'gender', 'age']
+newdata["sm_li"] = lr.predict(newdata)
 
-# Predict class, given input features
-predicted_class = lr.predict([person])
+newdata
 
-# Generate probability of positive class (=1)
-probs = lr.predict_proba([person])
-
-# Print predicted class and probability
-st.write(f"Predicted class: {predicted_class[0]}") #0 = not a LinkedIn user, 1=LinkedIn user
+st.write(f"Predicted class: {predicted_class[0]}") 
+st.write("0 = not a LinkedIn user, 1=LinkedIn user")
 st.write(f"Probability that you are a LinkedIn user: {probs[0][1]}")

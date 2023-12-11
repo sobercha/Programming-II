@@ -1,5 +1,6 @@
 panda
 numpy
+streamlit
 altair
-sklearn
+scikit-learn
 matplotlib.pyplot

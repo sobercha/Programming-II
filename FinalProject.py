@@ -13,7 +13,7 @@ import matplotlib.pyplot as plt
 st.header('Welcome to my LinkedIn User Prediction App!')
 st.subheader('Please answer the questions below to generate your prediction:')
 
-st.radio('Pick one:', ['nose','ear'])
+st.radio('What is your income level?:', ['1 - Less than $10,000','2 - 10 to under $20,000','3 - 20 to under $30,000','4 - 30 to under $40,000','5 - 40 to under $50,000','6 - 50 to under $75,000','7 - 75 to under $100,000','8 - 100 to under $150,000, OR','9 - $150,000 or more?',])
 
 # Read the CSV file
 s = pd.read_csv('social_media_usage.csv')

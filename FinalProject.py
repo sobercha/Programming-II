@@ -16,22 +16,22 @@ st.subheader('Please answer the questions below to generate your prediction:')
 income = st.radio('#1 What is your income level?:', ['Less than 10,000USD','10,000 to under 20,000USD','20,000 to under 30,000USD','30,000 to under 40,000USD','40,000 to under 50,000USD','50,000 to under 75,000USD','75,000 to under 100,000USD','100,000 to under 150,000USD','150,000USD+'])
 if income == "Less than 10,000USD":
     income =1
-elif Income == "10,000 to under 20,000USD":
-    Income =2
-elif Income == "20,000 to under 30,000USD":
-    Income =3
-elif Income == "30,000 to under 40,000USD":
-    Income =4
-elif Income == "40,000 to under 50,000USD":
-    Income =5
-elif Income == "50,000 to under 75,000USD":
-    Income =6
-elif Income == "75,000 to under 100,000USD":
-    Income =7
-elif Income == "100,000 to under 150,000USD":
-    Income =8    
+elif income == "10,000 to under 20,000USD":
+    income =2
+elif income == "20,000 to under 30,000USD":
+    income =3
+elif income == "30,000 to under 40,000USD":
+    income =4
+elif income == "40,000 to under 50,000USD":
+    income =5
+elif income == "50,000 to under 75,000USD":
+    income =6
+elif income == "75,000 to under 100,000USD":
+    income =7
+elif income == "100,000 to under 150,000USD":
+    income =8    
 else:
-    Income=9    
+    income=9    
     
 educ2 = st.radio('#2 What is your education level?:', ['1 - Less than high school (Grades 1-8 or no formal schooling)','2 - High school incomplete (Grades 9-11 or Grade 12 with NO diploma)','3 - High school graduate (Grade 12 with diploma or GED certificate)','4 - Some college, no degree (includes some community college)','5 - Two-year associate degree from a college or university','6 - Four-year college or university degree/Bachelor’s degree (e.g., BS, BA, AB)','7 - Some postgraduate or professional schooling, no postgraduate degree (e.g. some graduate school)','8 - Postgraduate or professional degree, including master’s, doctorate, medical or law degree (e.g., MA, MS, PhD, MD, JD)'])
 if educ2 == "1 - Less than high school (Grades 1-8 or no formal schooling)":
@@ -64,7 +64,7 @@ else:
     marital = 0
 
 female = st.radio('#5 What is your gender?:', ['1 - Male','2 - Female'])
-if gender == "1 - Male":
+if female == "1 - Male":
     gender = 0
 else:
     gender = 1

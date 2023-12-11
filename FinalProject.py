@@ -103,6 +103,8 @@ X_train, X_test, y_train, y_test = train_test_split(X,
 lr = LogisticRegression(class_weight='balanced')
 lr.fit(X_train, y_train)
 
+y_pred = lr.predict(X_test)
+
 confusion_matrix(y_test,y_pred)
 
 newdata = pd.DataFrame({

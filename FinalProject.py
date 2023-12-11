@@ -37,6 +37,8 @@ X_train, X_test, y_train, y_test = train_test_split(X,
 
 lr = LogisticRegression(class_weight='balanced')
 
+st.title('Welcome to my LinkedIn User Predictor App!')
+
 lr.fit(X_train, y_train)
 
 y_pred = lr.predict(X_test)

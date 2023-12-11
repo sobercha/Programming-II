@@ -13,7 +13,8 @@ import matplotlib.pyplot as plt
 st.header('Welcome to my LinkedIn User Prediction App!')
 st.subheader('Please answer the questions below to generate your prediction:')
 
-income = st.radio('#1 What is your income level?:', ['Less than 10,000USD','10,000 to under 20,000USD','20,000 to under 30,000USD','30,000 to under 40,000USD','40,000 to under 50,000USD','50,000 to under 75,000USD','75,000 to under 100,000USD','100,000 to under 150,000USD','150,000USD+'])
+income = st.selectbox(label="#1 What is your income level?:",
+                      options=("Less than 10,000USD","10,000 to under 20,000USD","20,000 to under 30,000USD","30,000 to under 40,000USD","40,000 to under 50,000USD","50,000 to under 75,000USD","75,000 to under 100,000USD","100,000 to under 150,000USD","150,000USD"))
 if income == "Less than 10,000USD":
     income =1
 elif income == "10,000 to under 20,000USD":
@@ -33,7 +34,8 @@ elif income == "100,000 to under 150,000USD":
 else:
     income=9    
     
-education = st.radio('#2 What is your education level?:', ['Less than high school (Grades 1-8 or no formal schooling)','High school incomplete (Grades 9-11 or Grade 12 with NO diploma)','High school graduate (Grade 12 with diploma or GED certificate)','Some college, no degree (includes some community college)','Two-year associate degree from a college or university','Four-year college or university degree/Bachelor’s degree (e.g., BS, BA, AB)','Some postgraduate or professional schooling, no postgraduate degree (e.g. some graduate school)','Postgraduate or professional degree, including master’s, doctorate, medical or law degree (e.g., MA, MS, PhD, MD, JD)'])
+education = st.selectbox(label="#2 What is your education level?:",
+                         options=("Less than high school (Grades 1-8 or no formal schooling)","High school incomplete (Grades 9-11 or Grade 12 with NO diploma)","High school graduate (Grade 12 with diploma or GED certificate)","Some college, no degree (includes some community college)","Two-year associate degree from a college or university","Four-year college or university degree/Bachelor’s degree (e.g., BS, BA, AB)","Some postgraduate or professional schooling, no postgraduate degree (e.g. some graduate school)","Postgraduate or professional degree, including master’s, doctorate, medical or law degree (e.g., MA, MS, PhD, MD, JD)"))
 if education == "Less than high school (Grades 1-8 or no formal schooling)":
     education =1
 elif education == "High school incomplete (Grades 9-11 or Grade 12 with NO diploma)":
@@ -51,19 +53,22 @@ elif education == "Some postgraduate or professional schooling, no postgraduate 
 else:
     education=8 
 
-parent = st.selectbox(label="#3 Are you a parent?:", options=("Yes","No"))
+parent = st.selectbox(label="#3 Are you a parent?:", 
+                      options=("Yes","No"))
 if parent == "Yes":
     parent = 1
 else:
     parent = 0
     
-married = st.radio('#4 Are you married?:', ['Yes','No'])
+married = st.selectbox(label="#4 Are you married?:",
+                       options=("Yes","No"))
 if married == "Yes":
     married = 1
 else:
     married = 0
 
-female = st.radio('#5 What is your gender?:', ['Male','Female'])
+female = st.selectbox(label="#5 What is your gender?:", 
+                      options=("Male","Female"))
 if female == "Male":
     female = 0
 else:

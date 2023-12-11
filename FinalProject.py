@@ -72,6 +72,10 @@ else:
     gender = 1
     
 age = st.number_input('#6 What is your age?')
+if age >98:
+    age = NA
+else:
+    age = age
 
 s = pd.read_csv('social_media_usage.csv')
 

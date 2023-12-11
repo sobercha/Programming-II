@@ -1,6 +1,7 @@
-panda
+pandas
 numpy
 streamlit
 altair
 scikit-learn
-matplotlib.pyplot
+matplotlib
+plotly

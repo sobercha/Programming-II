@@ -10,8 +10,8 @@ from sklearn.metrics import confusion_matrix
 from sklearn import metrics
 import matplotlib.pyplot as plt
 
-st.markdown("# Welcome to my LinkedIn User Prediction App!")
-st.markdown("# Please answer the questions below to generate your prediction:")
+st.header("# Welcome to my LinkedIn User Prediction App!")
+st.subheader("# Please answer the questions below to generate your prediction:")
 
 
 

@@ -11,3 +11,6 @@ from sklearn import metrics
 
 s = pd.read_csv('social_media_usage.csv')
 
+def clean_sm(x):
+        test = np.where(x==1, 1, 0)
+        return test  

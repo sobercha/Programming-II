@@ -89,6 +89,8 @@ ss = pd.DataFrame({
     "female":np.where(s["gender"] == 2, 1, 0),
     "age":np.where(s["age"] > 98, np.nan, s["age"])})
 
+ss = ss.dropna()
+
 y = ss["sm_li"]
 X = ss[["income", "education", "parent", "married","female","age"]]
 

@@ -11,7 +11,7 @@ from sklearn import metrics
 import matplotlib.pyplot as plt
 
 st.markdown("# Welcome to my LinkedIn User Prediction App!")
-st.markdown("##Please answer the questions below to generate your prediction:")
+st.markdown("## Please answer the questions below to generate your prediction:")
 
 # Read the CSV file
 s = pd.read_csv('social_media_usage.csv')

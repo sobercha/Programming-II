@@ -116,8 +116,6 @@ newdata = pd.DataFrame({
 
 newdata["sm_li"] = lr.predict(newdata)
 
-newdata
-
 person = ["income", "education", "parent", "married", "female", "age"]
 
 

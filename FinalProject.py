@@ -33,20 +33,20 @@ elif income == "100,000 to under 150,000USD":
 else:
     income=9    
     
-education = st.radio('#2 What is your education level?:', ['1 - Less than high school (Grades 1-8 or no formal schooling)','2 - High school incomplete (Grades 9-11 or Grade 12 with NO diploma)','3 - High school graduate (Grade 12 with diploma or GED certificate)','4 - Some college, no degree (includes some community college)','5 - Two-year associate degree from a college or university','6 - Four-year college or university degree/Bachelor’s degree (e.g., BS, BA, AB)','7 - Some postgraduate or professional schooling, no postgraduate degree (e.g. some graduate school)','8 - Postgraduate or professional degree, including master’s, doctorate, medical or law degree (e.g., MA, MS, PhD, MD, JD)'])
-if education == "1 - Less than high school (Grades 1-8 or no formal schooling)":
+education = st.radio('#2 What is your education level?:', ['Less than high school (Grades 1-8 or no formal schooling)','High school incomplete (Grades 9-11 or Grade 12 with NO diploma)','High school graduate (Grade 12 with diploma or GED certificate)','Some college, no degree (includes some community college)','Two-year associate degree from a college or university','Four-year college or university degree/Bachelor’s degree (e.g., BS, BA, AB)','Some postgraduate or professional schooling, no postgraduate degree (e.g. some graduate school)','Postgraduate or professional degree, including master’s, doctorate, medical or law degree (e.g., MA, MS, PhD, MD, JD)'])
+if education == "Less than high school (Grades 1-8 or no formal schooling)":
     education =1
-elif education == "2 - High school incomplete (Grades 9-11 or Grade 12 with NO diploma)":
+elif education == "High school incomplete (Grades 9-11 or Grade 12 with NO diploma)":
     education =2
-elif education == "3 - High school graduate (Grade 12 with diploma or GED certificate)":
+elif education == "High school graduate (Grade 12 with diploma or GED certificate)":
     education =3
-elif education == "4 - Some college, no degree (includes some community college)":
+elif education == "Some college, no degree (includes some community college)":
     education =4
-elif education == "5 - Two-year associate degree from a college or university":
+elif education == "Two-year associate degree from a college or university":
     education =5
-elif education == "6 - Four-year college or university degree/Bachelor’s degree (e.g., BS, BA, AB)":
+elif education == "Four-year college or university degree/Bachelor’s degree (e.g., BS, BA, AB)":
     education =6
-elif education == "7 - Some postgraduate or professional schooling, no postgraduate degree (e.g. some graduate school)":
+elif education == "Some postgraduate or professional schooling, no postgraduate degree (e.g. some graduate school)":
     education =7  
 else:
     education=8 
@@ -57,14 +57,14 @@ if parent == "Yes":
 else:
     parent = 0
     
-married = st.radio('#4 Are you married?:', ['1 - Yes','2 - No'])
-if married == "1 - Yes":
+married = st.radio('#4 Are you married?:', ['Yes','No'])
+if married == "Yes":
     married = 1
 else:
     married = 0
 
-female = st.radio('#5 What is your gender?:', ['1 - Male','2 - Female'])
-if female == "1 - Male":
+female = st.radio('#5 What is your gender?:', ['Male','Female'])
+if female == "Male":
     female = 0
 else:
     female = 1
@@ -105,19 +105,7 @@ lr.fit(X_train, y_train)
 
 y_pred = lr.predict(X_test)
 
-newdata = pd.DataFrame({
-    "income": [8, 8],
-    "education": [7, 7],
-    "parent": [0, 0],
-    "married": [1, 1],
-    "female": [1, 1],
-    "age": [42, 82]
-})
-
-newdata["sm_li"] = lr.predict(newdata)
-
 person = ["income", "education", "parent", "married", "female", "age"]
-
 
 predicted_class = lr.predict([person])
 

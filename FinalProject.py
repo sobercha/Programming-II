@@ -118,6 +118,13 @@ newdata["sm_li"] = lr.predict(newdata)
 
 newdata
 
+person = ["income", "education", "parent", "married", "female", "age"]
+
+
+predicted_class = lr.predict([person])
+
+probs = lr.predict_proba([person])
+
 st.write(f"Predicted class: {predicted_class[0]}") 
 st.write("0 = not a LinkedIn user, 1=LinkedIn user")
 st.write(f"Probability that you are a LinkedIn user: {probs[0][1]}")

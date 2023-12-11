@@ -25,7 +25,6 @@ age = st.number_input('#6 What is your age?')
 s = pd.read_csv('social_media_usage.csv')
 
 ss = pd.DataFrame({
-    "sm_li":np.where(s["web1h"] == 1, 1, clean_sm("web1h")),
     "income":np.where(s["income"] > 9, np.nan, s["income"]),
     "education":np.where(s["educ2"] > 8, np.nan, s["educ2"]),
     "parent":np.where(s["par"] == 1, 1, 0),

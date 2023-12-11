@@ -10,7 +10,7 @@ st.header('Welcome to my LinkedIn User Prediction App!')
 st.subheader('Please answer the questions below to generate your prediction:')
 
 income = st.selectbox(label="#1 What is your income level?:",
-                      options=("Less than 10,000USD","10,000 to under 20,000USD","20,000 to under 30,000USD","30,000 to under 40,000USD","40,000 to under 50,000USD","50,000 to under 75,000USD","75,000 to under 100,000USD","100,000 to under 150,000USD","150,000USD"))
+                      options=("Less than 10,000USD","10,000 to under 20,000USD","20,000 to under 30,000USD","30,000 to under 40,000USD","40,000 to under 50,000USD","50,000 to under 75,000USD","75,000 to under 100,000USD","100,000 to under 150,000USD","150,000USD+"))
 if income == "Less than 10,000USD":
     income =1
 elif income == "10,000 to under 20,000USD":

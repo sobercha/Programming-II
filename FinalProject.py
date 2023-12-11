@@ -106,12 +106,12 @@ lr.fit(X_train, y_train)
 
 y_pred = lr.predict(X_test)
 
-person = ["income", "education", "parent", "married", "female", "age"]
+person = [income, education, parent, married, female, age]
 
 predicted_class = lr.predict([person])
 
 probs = lr.predict_proba([person])
 
-st.write(f"Predicted class: {predicted_class[0]}") 
-st.write("0 = not a LinkedIn user, 1=LinkedIn user")
-st.write(f"Probability that you are a LinkedIn user: {probs[0][1]}")
+st.write('Predicted class: {predicted_class[0]}') 
+st.write('0 = not a LinkedIn user, 1=LinkedIn user')
+st.write('Probability that you are a LinkedIn user: {probs[0][1]}')

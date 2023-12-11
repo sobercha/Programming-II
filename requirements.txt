@@ -1,0 +1,5 @@
+panda
+numpy
+altair
+sklearn
+matplotlib.pyplot

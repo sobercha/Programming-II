@@ -10,8 +10,6 @@ from sklearn.metrics import confusion_matrix
 from sklearn import metrics
 import matplotlib.pyplot as plt
 
-image = Image.open('logo.png')
-
 st.header('Welcome to my LinkedIn User Prediction App!')
 st.subheader('Please answer the questions below to generate your prediction:')
 

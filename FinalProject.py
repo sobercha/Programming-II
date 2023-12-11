@@ -10,12 +10,10 @@ from sklearn.metrics import confusion_matrix
 from sklearn import metrics
 import matplotlib.pyplot as plt
 
-st.image('logo.png')
-
 st.header('Welcome to my LinkedIn User Prediction App!')
 st.subheader('Please answer the questions below to generate your prediction:')
 
-
+st.radio('Pick one:', ['nose','ear'])
 
 # Read the CSV file
 s = pd.read_csv('social_media_usage.csv')

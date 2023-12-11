@@ -33,41 +33,41 @@ elif income == "100,000 to under 150,000USD":
 else:
     income=9    
     
-educ2 = st.radio('#2 What is your education level?:', ['1 - Less than high school (Grades 1-8 or no formal schooling)','2 - High school incomplete (Grades 9-11 or Grade 12 with NO diploma)','3 - High school graduate (Grade 12 with diploma or GED certificate)','4 - Some college, no degree (includes some community college)','5 - Two-year associate degree from a college or university','6 - Four-year college or university degree/Bachelor’s degree (e.g., BS, BA, AB)','7 - Some postgraduate or professional schooling, no postgraduate degree (e.g. some graduate school)','8 - Postgraduate or professional degree, including master’s, doctorate, medical or law degree (e.g., MA, MS, PhD, MD, JD)'])
-if educ2 == "1 - Less than high school (Grades 1-8 or no formal schooling)":
-    educ2 =1
-elif educ2 == "2 - High school incomplete (Grades 9-11 or Grade 12 with NO diploma)":
-    educ2 =2
-elif educ2 == "3 - High school graduate (Grade 12 with diploma or GED certificate)":
-    educ2 =3
-elif educ2 == "4 - Some college, no degree (includes some community college)":
-    educ2 =4
-elif educ2 == "5 - Two-year associate degree from a college or university":
-    educ2 =5
-elif educ2 == "6 - Four-year college or university degree/Bachelor’s degree (e.g., BS, BA, AB)":
-    educ2 =6
-elif educ2 == "7 - Some postgraduate or professional schooling, no postgraduate degree (e.g. some graduate school)":
-    educ2 =7  
+education = st.radio('#2 What is your education level?:', ['1 - Less than high school (Grades 1-8 or no formal schooling)','2 - High school incomplete (Grades 9-11 or Grade 12 with NO diploma)','3 - High school graduate (Grade 12 with diploma or GED certificate)','4 - Some college, no degree (includes some community college)','5 - Two-year associate degree from a college or university','6 - Four-year college or university degree/Bachelor’s degree (e.g., BS, BA, AB)','7 - Some postgraduate or professional schooling, no postgraduate degree (e.g. some graduate school)','8 - Postgraduate or professional degree, including master’s, doctorate, medical or law degree (e.g., MA, MS, PhD, MD, JD)'])
+if education == "1 - Less than high school (Grades 1-8 or no formal schooling)":
+    education =1
+elif education == "2 - High school incomplete (Grades 9-11 or Grade 12 with NO diploma)":
+    education =2
+elif education == "3 - High school graduate (Grade 12 with diploma or GED certificate)":
+    education =3
+elif education == "4 - Some college, no degree (includes some community college)":
+    education =4
+elif education == "5 - Two-year associate degree from a college or university":
+    education =5
+elif education == "6 - Four-year college or university degree/Bachelor’s degree (e.g., BS, BA, AB)":
+    education =6
+elif education == "7 - Some postgraduate or professional schooling, no postgraduate degree (e.g. some graduate school)":
+    education =7  
 else:
-    educ2=8 
+    education=8 
 
-par = st.selectbox(label="#3 Are you a parent?:", options=("Yes","No"))
-if par == "Yes":
-    par = 1
+parent = st.selectbox(label="#3 Are you a parent?:", options=("Yes","No"))
+if parent == "Yes":
+    parent = 1
 else:
-    par = 0
+    parent = 0
     
-marital = st.radio('#4 Are you married?:', ['1 - Yes','2 - No'])
-if marital == "1 - Yes":
-    marital = 1
+married = st.radio('#4 Are you married?:', ['1 - Yes','2 - No'])
+if married == "1 - Yes":
+    married = 1
 else:
-    marital = 0
+    married = 0
 
 female = st.radio('#5 What is your gender?:', ['1 - Male','2 - Female'])
 if female == "1 - Male":
-    gender = 0
+    female = 0
 else:
-    gender = 1
+    female = 1
     
 age = st.number_input('#6 What is your age?')
 if age >98:
